@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(cv_bridge)
 
+include(dependencies.cmake)
 include(cmake/options.cmake)
 
 find_package(catkin REQUIRED COMPONENTS rosconsole sensor_msgs)
@@ -20,7 +21,7 @@ else ()
 endif ()
 
 if (BUILD_WITH_LOCAL_OPENCV)
-    find_library(OpenCV opencv)
+    message(STATUS "Using local OpenCV")
 else ()
     set(_opencv_version 4)
     find_package(OpenCV 4 QUIET)
