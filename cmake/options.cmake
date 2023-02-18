@@ -1,0 +1,1 @@
+option(BUILD_WITH_LOCAL_OPENCV "Build with local OpenCV" OFF)
